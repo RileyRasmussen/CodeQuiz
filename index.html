@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Basics: Code Quiz</title>
-    <link rel="stylesheet" href="./Assets/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="./Assets/script.js"></script>
+  </head>
+  <body>
     <!-- High score link -->
     <header>
-        <div class="high-score">
-            <a href="./highscore.html">High Scores</a>
+      <div class="high-score">High Scores</div>
+      <!-- Starting Screen / Containers -->
+      <div class="container">
+        <div id="home" class="flex-column flex-center">
+          <h1 class="page-title=">Javascript Basics: Code Quiz</h1>
+          <br />
+          <p>
+            Try to answer each question as quickly as possible! Watch out
+            though, answering a quesiton wrong will subtract time from the
+            clock; when the clock hits zero - the quiz is over! <br />
+            Play with your friends and family to see who is the best coder -
+            Javascript style!
+          </p>
         </div>
-    
-    <!-- Timer -->
-        <div>
-            <script>
-
-            </script>
-        </div>
-
-    <!-- Starting Screen / Containers -->
-        <div class="container">
-            <div id="home" class="flex-column flex-center">
-                <h1 class="page-title=">Javascript Basics: Code Quiz</h1>
-                <p>Try to answer each question as quickly as possible! Watch out though, answering a quesiton wrong will subtract time from
-                    the clock; when the clock hits zero - the quiz is over! <br />
-                    <br />
-                    Play with your friends and family to see who is the best coder - Javascript style!
-                </p>
-            </div>
-        </div>
+      </div>
     </header>
 
-    <a href="./question1.html" class="btn">Start</a>
-    
-<!-- Script.js link -->
-    <script src="./Assets/script.js"></script>
+    <div class="quizContainer container-fluid well well-lg">
+      <div id="quiz1" class="text-center">
+        <!-- TIMER -->
+        <span id="iTimeShow">Time Remaining: </span>
+        <br />
+        <span id="timer" style="font-size: 25px"></span>
+      </div>
 
-</body>
+      <div class="quizMessage"></div>
+      <div class="question"></div>
+      <ul class="choiceList"></ul>
+      <div class="result"></div>
+      <!-- Next Button -->
+      <button class="startButton" onclick="startQuiz()">Start Quiz</button>
+      <button class="nextButton" onclick="nextQuestion()">Next Question</button>
+    </div> 
+    <!-- Script.js link -->
+    
+  </body>
 </html>
 
 <!-- AS A coding boot camp student
